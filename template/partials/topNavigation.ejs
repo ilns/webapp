@@ -1,16 +1,17 @@
 <nav class="navbar navbar-default" role="navigation">
     <ul class="nav navbar-nav">
-        <li><a href="/">Главная</a></li>
-        <li><a href="./registration">Регистрация</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="./registration">Registration</a></li>
         <% if (user) { %>
-        <li><a href="./work">Рабочая страница</a></li>
+        <li><a href="./task">Add task</a></li>
         <% } %>
     </ul>
     <ul class="nav navbar-nav navbar-right">
         <% if (user) { %>
-        <li><a href="" onclick="$('<form method=POST action=/logout>').submit();return false">Выйти</a></form></li>
+        <!--<li><a href="" onclick="$('<form method=POST action=/logout>').submit();return false">Logout</a></form></li>-->
+        <li><a href="" onclick="$('<form method=POST action=/logout></form>').submit();return false">Logout</a></li>
         <% } else { %>
-        <li><a href="./logining">Войти</a></li>
+        <li><a href="./logining">Login</a></li>
         <% } %>
     </ul>
 </nav>

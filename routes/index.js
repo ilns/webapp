@@ -12,6 +12,7 @@ module.exports = function(app) {
 
   app.post('/logout', require('./logout').post);
 
-  app.get('/work', checkAuth, require('./work').get);
+  app.get('/task', checkAuth, require('./task').get);
+  app.post('/task', checkAuth, require('./task').post);
 
 };
